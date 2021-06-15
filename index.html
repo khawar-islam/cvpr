@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+
+<!-- === Header Starts === -->
+
+<!-- Mirrored from zpdesu.github.io/SEAN/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 05:06:59 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>Home</title>
+  <script src="../../polyfill.io/v3/polyfill.min1162.js?features=es6"></script>
+  <script id="MathJax-script" async src="../../cdn.jsdelivr.net/npm/mathjax%403.0.1/es5/tex-mml-chtml.js"></script>
+  <link href="assets/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/font.css" rel="stylesheet" type="text/css">
+  <link href="assets/style.css" rel="stylesheet" type="text/css">
+</head>
+<!-- === Header Ends === -->
+
+
+<body>
+
+
+<!-- === Home Section Starts === -->
+<div class="container">
+  <div class="title" style="margin: 20pt auto;font-size: 24pt;">
+    Image Compression with Recurrent Neural Network and Generalized Divisive Normalization
+  </div>
+  <div class="oral">
+    2021 IEEE/CVF Conference on Computer Vision and Pattern Recognition
+  </div>
+  <div class="author">
+    <a href="#" target="_blank">Khawar Islam,</a><sup>1</sup>&nbsp;
+    <a href="https://danglienminh.github.io/" target="_blank">Dang Lien Minh,</a><sup>1</sup>&nbsp;
+    <a href="#" target="_blank">Sujin Lee,</a><sup>2</sup>&nbsp;
+    <a href="#" target="_blank">Hyeonjoon Moon,</a><sup>1,2</sup>&nbsp;
+  </div>
+  <div class="institution">
+    <sup>1</sup>Computer Vision and Pattern Recognition Lab<sup>1</sup>, Sejong University, South Korea<br>
+    <sup>2</sup>Department of Artificial Intelligence<sup>1,2</sup>, Sejong University, South Korea
+  </div>
+  <div class="link">
+    <a href="https://openaccess.thecvf.com/content/CVPR2021W/CLIC/papers/Islam_Image_Compression_With_Recurrent_Neural_Network_and_Generalized_Divisive_Normalization_CVPRW_2021_paper.pdf" target="_blank">[Paper]</a>&nbsp;
+    <a href="https://github.com/khawar512/ImageCompression" target="_blank">[Code]</a>
+    <a href="https://youtu.be/B02dOB0PXxk" target="_blank">[Video]</a>
+    <a href="https://github.com/liujiaheng/CompressionData" target="_blank">[Data]</a>
+    <a href="assets/bibtex.txt" target="_blank">[Bibtex]</a>
+
+  </div>
+  <div class="teaser">
+    <embed src="assets/CVPRW_Poster.pdf" width="960" height="540">
+  </div>
+  <div class="body">
+  In this paper, two spatial adaptive blocks called analysis and synthesis are proposed in the variable-rate encoder and decoder side based on a convolution layer and generalized divisive normalization process. Then, it embeds with a variable-rate framework. The analysis block generates a powerful spatial and channel representation with a down-sampling feature for encoding. Simultaneously, synthesis block up-sampling the decoded image. To the best of our knowledge, constructing recurrent neural network-based image compression networks is very limited. This is the first work that employs a generalized divisive normalization scheme in a variable rate network to handle multiple bit rates in the RNN network. Furthermore, visual quality performance and scalability of the proposed blocks and end-to-end network are jointly validated by the popular evaluation with PSNR and MS-SSIM. Comprehensive experiments have been performed on Kodak to describe that the proposed blocks and network jointly achieve significant performance by comparing standard image codecs JPEG, BPG, WebP, and recent method George's.
+  </div>
+</div>
+<!-- === Home Section Ends === -->
+
+
+<!--====== Overview Section Starts ======-->
+<div class="container">
+  <div class="title">Abstract</div>
+  <div class="body">
+    Image compression is the method to remove spatial redundancy between adjacent pixels and reconstruct a high-quality image. In the past few years, deep learning has gained much more attention and produced more promising results in image reconstruction. However, recent methods developed more deep and complex networks which significantly increased network complexity. In this paper, two effective novel blocks are developed namely analysis and synthesis block that employ convolution layer and generalized divisive normalization in the variable-rate encoder and decoder side. Our network utilizes a pixel RNN approach for quantization. Furthermore, to improve the whole network, we encode a residual image with the utilization of LSTM cells to reduce unnecessary information. Experimental results demonstrated that the proposed variable-rate framework with novel blocks outperforms existing methods and standard image codecs, such as George's and JPEG in terms of image similarity.
+  </div>
+</div>
+<!--====== Overview Section Ends ======-->
+
+
+<!--====== Video Section Starts ======-->
+<div class="container">
+  <div class="title">Iteration Wise Quality Improvment</div>
+  <div style="text-align: center;">
+    <!--<iframe width="960" height="540" src="https://www.youtube.com/embed/0Vbj9xFgoUw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" -->
+    <img src="assets/image_cvpr.gif" width="960" height="540">
+    <allowfullscreen></iframe>
+  </div>
+
+
+</div>
+<!--====== Video Section Ends ======-->
+
+
+
+
+<!--====== Architecture Section Starts ======-->
+<div class="container">
+  <div class="title">Iterative Architecture</div>
+
+  <div class="teaser">
+    <img src="assets/architecture.png"  style="width: 80%">
+  </div>
+  <div class="body">
+    The iterative architecture of image compression framework based on recurrent neural network and generalized divise normalization. Each input patch was first passed to the analysis-encoder block to enrich image representation. Similarly, the synthesis-decoder block reconstructs a decoded image with the help of recurrent neural network cells.
+  </div>
+  </div>
+</div>
+<!--====== Architecture Section Ends ======-->
+
+
+<!--====== Results Section Starts ======-->
+<div class="container">
+  <div class="title">Performance Evaluation on Kodak dataset</div>
+  <div class="results">1. Existing CVPR method and Ours</div>
+  <div class="teaser">
+    <img src="assets/new_mssim_psnr.PNG" style="width: 85%">
+  </div>
+  <div class="body">
+  Comparative results of variable-rate network with analysis and synthesis block with recent approaches on kodak benchmark interms of MS-SSIM (left side) and PSNR (right side) vs. BPP.
+  </div>
+
+</div>
+<!--====== Results Section Ends ======-->
+
+
+<!--====== Bibtex Section Starts ======-->
+<div class="container">
+  <div class="bibtex">Bibtex</div>
+<pre>
+  @InProceedings{Islam_2021_CVPR,
+    author    = {Islam, Khawar and Dang, L. Minh and Lee, Sujin and Moon, Hyeonjoon},
+    title     = {Image Compression With Recurrent Neural Network and Generalized Divisive Normalization},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
+    month     = {June},
+    year      = {2021},
+    pages     = {1875-1879}
+}
+</pre>
+</div>
+
+<!--====== Bibtex Section Ends ======-->
+
+
+<!--====== Bibtex Section Starts ======-->
+<div class="container">
+  <div class="acknowledgement">Acknowledgement</div>
+  <div class="body" style="font-size: 11pt;;">
+    This work was supported by Basic Science Research Program through the National Research Foundation of Korea (NRF) funded by the Ministry of Education (2020R1A6A1A03038540) and by Institute of Information \& communications Technology Planning \& Evaluation (IITP) grant funded by the Korea government (MSIT) (2019-0-00136, Development of AI-Convergence Technologies for Smart City Industry Productivity Innovation).
+  </div>
+
+</div>
+
+<!--====== Bibtex Section Ends ======-->
+
+
+
+
+<!--====== References Section Starts ======-->
+
+<div class="container">
+  <div class="ref">Related Work</div>
+  <div class="citation">
+    <img src="assets/cvpr2017.PNG">
+    <a href="https://ieeexplore.ieee.org/document/8100060">
+      George T, Damien V, Nick J,Sung Jin H, David M, Joel S, Michele C.
+      Full Resolution Image Compression with Recurrent Neural Networks.
+      CVPR, 2017.
+    </a>
+  </div>
+  <div class="citation">
+    <img src="assets/iclr2016.PNG">
+    <a href="https://arxiv.org/pdf/1511.06281.pdf">
+      Johannes Ballé, Valero Laparra & Eero P. Simoncelli.
+      Density Modeling of Images Using a Generlized Normalization Transformation
+      ICLR, 2016.
+    </a>
+  </div>
+  <div class="citation">
+    <img src="assets/iclr2017.PNG">
+    <a href="https://arxiv.org/pdf/1611.01704.pdf">
+      Ting-Chun Wang, Ming-Yu Liu, Jun-Yan Zhu, Andrew Tao, Jan Kautz, and Bryan Catanzaro.
+      End-To-End Optimized Image Compression.
+      ICLR, 2017.
+    </a>
+  </div>
+
+
+<!--====== References Section Ends ======-->
+
+
+</body>
+
+</html>
